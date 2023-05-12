@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block title %} willthisgetmecanceled {% endblock %}
+
+{% block content %}
+<div>
+    <form method="post" action="/">
+        {% csrf_token %}
+        {{form.as_p}}
+        {{output}}
+        <button type="submit", name="enter">enter</button>    
+    </form> 
+    
+</div>
+{% endblock %}
